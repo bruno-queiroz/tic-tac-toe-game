@@ -1,0 +1,95 @@
+#root {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.tic-tac-toe {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 500px;
+  margin-inline: auto;
+  margin-top: 4rem;
+}
+
+.square {
+  display: flex;
+
+  border: none;
+  background-color: white;
+  height: 170px;
+  position: relative;
+}
+
+.square:nth-child(1),
+.square:nth-child(2),
+.square:nth-child(3) {
+  border-top: none;
+}
+
+.square:nth-child(7),
+.square:nth-child(8),
+.square:nth-child(9) {
+  border-bottom: none;
+}
+
+.square:nth-child(1),
+.square:nth-child(4),
+.square:nth-child(7) {
+  border-left: none;
+}
+
+.square:nth-child(3),
+.square:nth-child(6),
+.square:nth-child(9) {
+  border-right: none;
+}
+
+.square-mark {
+  position: absolute;
+  font-size: 5rem;
+  font-weight: 500;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.winner-dash {
+  position: absolute;
+  border-radius: 100vh;
+  background-color: rgb(30, 194, 30);
+  z-index: 100;
+}
+
+.tic-tac-toe-column-dash-1 {
+  position: absolute;
+  height: 100%;
+  width: 3px;
+  background-color: black;
+  left: 33%;
+  z-index: 50;
+}
+
+.tic-tac-toe-column-dash-2 {
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  background-color: black;
+  right: 33%;
+  z-index: 50;
+}
+
+.tic-tac-toe-row-dash-1,
+.tic-tac-toe-row-dash-2 {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  z-index: 50;
+}
+
+.tic-tac-toe-row-dash-1 {
+  top: 33%;
+}
+
+.tic-tac-toe-row-dash-2 {
+  bottom: 33%;
+}
